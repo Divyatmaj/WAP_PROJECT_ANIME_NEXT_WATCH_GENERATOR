@@ -41,8 +41,14 @@ function displayMovies(movieList) {
     const title = document.createElement("h1");
     title.textContent = movie.title;
 
+    
+    const rating = document.createElement("p");
+    rating.textContent = "⭐ " + (movie.score || "N/A");
+  
+
     card.appendChild(img);
     card.appendChild(title);
+    card.appendChild(rating); 
 
     root.appendChild(card);
   });

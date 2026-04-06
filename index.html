@@ -7,34 +7,28 @@
 </head>
 <body>
 
-<div style="text-align:center; margin-top:20px;">
+<div class="top-bar">
+
   <input 
     type="text" 
     id="searchInput" 
-    placeholder="Search anime..." 
-    style="padding:10px; width:250px; border-radius:8px; border:none;"
+    placeholder="Search anime..."
   />
-</div>
 
-
-<div style="text-align:center; margin-top:10px;">
-  <button id="themeToggle">🌙 Dark Mode</button>
-</div>
-
-
-<div style="text-align:center; margin-top:10px;">
   <select id="sortSelect">
     <option value="default">Sort</option>
     <option value="asc">Rating ↑</option>
     <option value="desc">Rating ↓</option>
   </select>
-</div>
 
-<div style="text-align:center; margin: 20px;">
-  <button id="prevBtn">⬅ Prev</button>
-  <button id="nextBtn">Next ➡</button>
-</div>
+  <button id="themeToggle">🌙</button>
 
+  <div class="pagination">
+    <button id="prevBtn">⬅</button>
+    <button id="nextBtn">➡</button>
+  </div>
+
+</div>
 
   <div id="root"></div>
 

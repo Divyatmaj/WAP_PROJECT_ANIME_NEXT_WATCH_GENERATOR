@@ -30,7 +30,6 @@ body {
   justify-content: space-between;
 }
 
-
 .card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 16px 30px rgba(0,0,0,0.2);
@@ -55,34 +54,94 @@ body {
   line-height: 1.4;
 }
 
-#prevBtn, #nextBtn {
-  padding: 10px 16px;
-  margin: 5px;
+.card p {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.top-bar {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.top-bar input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.top-bar select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.top-bar button {
+  padding: 10px 14px;
   border: none;
   border-radius: 8px;
-  background-color: #333;
-  color: white;
   cursor: pointer;
-}
-
-#prevBtn:hover, #nextBtn:hover {
-  background-color: #555;
-}
-
-.dark {
-  background: #121212;
+  background: #333;
   color: white;
 }
 
-.dark .card {
+.top-bar button:hover {
+  background: #555;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+}
+
+
+body.dark {
+  background: #121212 !important;
+  color: white;
+}
+
+body.dark .card {
   background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.05);
 }
 
-.dark .card h1 {
+body.dark .card:hover {
+  box-shadow: 0 16px 30px rgba(255,255,255,0.1);
+}
+
+body.dark .card h1 {
+  color: #ffffff;
+}
+
+body.dark .card p {
+  color: #cccccc;
+}
+
+body.dark .top-bar {
+  background: rgba(30, 30, 30, 0.8);
+}
+
+body.dark .top-bar input,
+body.dark .top-bar select {
+  background: #1e1e1e;
   color: white;
 }
-
-/* responsive adjustments for different screen sizes */
 
 /* tablet */
 @media (max-width: 1200px) {
