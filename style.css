@@ -55,6 +55,20 @@ body {
   line-height: 1.4;
 }
 
+#prevBtn, #nextBtn {
+  padding: 10px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+  background-color: #555;
+}
+
 /* responsive adjustments for different screen sizes */
 
 /* tablet */
