@@ -69,6 +69,19 @@ body {
   background-color: #555;
 }
 
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .card {
+  background-color: #1e1e1e;
+}
+
+.dark .card h1 {
+  color: white;
+}
+
 /* responsive adjustments for different screen sizes */
 
 /* tablet */
