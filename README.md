@@ -1,5 +1,10 @@
 # 🎌 Anime Next Watch Generator
 
+🌐 Live Demo
+👉 https://wap-project-anime-next-watch-genera-zeta.vercel.app/
+
+Experience the application live and explore anime recommendations in real-time.
+
 ## 📌 Overview
 
 Anime Next Watch Generator is a web application designed to help users discover trending and top-rated anime effortlessly. The platform allows users to search, filter, and explore anime based on genres, ratings, and popularity. It aims to solve the common problem of “what to watch next” by providing a clean and interactive interface.
