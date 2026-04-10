@@ -10,9 +10,8 @@ async function fetchMovies(page = 1) {
     //other api with more queries for more accurate results
     // https://api.jikan.moe/v4/top/anime?limit=12&page=4
     
-    // 📄 PAGINATION FEATURE START
+
     const response = await fetch(`https://api.jikan.moe/v4/anime?page=${page}`);
-    // 📄 PAGINATION FEATURE END
 
     const data = await response.json();
 
@@ -20,6 +19,7 @@ async function fetchMovies(page = 1) {
 
     allMovies = data.data;
     displayMovies(allMovies);
+    document.getElementById("pageNumber").textContent = currentPage;
 
   } catch (error) {
     root.innerHTML = "<h2>Failed to load data</h2>";
@@ -29,6 +29,10 @@ async function fetchMovies(page = 1) {
 
 function displayMovies(movieList) {
   root.innerHTML = "";
+  if (movieList.length === 0) {
+  root.innerHTML = "<h2>No anime found</h2>";
+  return;
+}
 
   movieList.forEach(movie => {
     const card = document.createElement("div");
@@ -45,7 +49,9 @@ function displayMovies(movieList) {
     const rating = document.createElement("p");
     rating.textContent = "⭐ " + (movie.score || "N/A");
   
-
+  card.addEventListener("click", () => {
+    window.open(movie.url, "_blank");
+  });
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(rating); 
