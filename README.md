@@ -1,147 +1,123 @@
-# 🎌 Anime Next Watch Generator
+# 🎌 Anime Browser Web App
 
-🌐 Live Demo
+🌐 **Live Demo**  
 👉 https://wap-project-anime-next-watch-genera-zeta.vercel.app/
-
-Experience the application live and explore anime recommendations in real-time.
-
-## 📌 Overview
-
-Anime Next Watch Generator is a web application designed to help users discover trending and top-rated anime effortlessly. The platform allows users to search, filter, and explore anime based on genres, ratings, and popularity. It aims to solve the common problem of “what to watch next” by providing a clean and interactive interface.
 
 ---
 
-## 🎯 Purpose
+## 📌 Overview
 
-This project demonstrates the use of JavaScript concepts such as API integration, array higher-order functions, and dynamic UI rendering. It also focuses on building a responsive and user-friendly interface.
+This is a simple anime browsing web application built using **HTML, CSS, and vanilla JavaScript**.
+
+It fetches anime data from the **Jikan API** and displays it in a clean, responsive card layout. Users can search, sort, and navigate through different pages of anime results.
+
+The goal of this project is to demonstrate core frontend development skills without using any frameworks.
+
+---
+
+## ⚙️ Features
+
+### 🔍 Search
+- Search anime by title
+- Instant filtering as you type (client-side)
+
+### 🔃 Sorting
+- Sort anime based on rating:
+  - Low → High
+  - High → Low
+
+### 📄 Pagination
+- Navigate between pages using Next and Previous buttons
+- Displays current page number
+
+### 🎨 Dark Mode
+- Toggle between light and dark themes
+- Theme preference is saved using localStorage
+
+### 🖱 Click to View
+- Clicking on an anime card opens its MyAnimeList page in a new tab
 
 ---
 
 ## 🌐 API Used
 
-* **Jikan API (MyAnimeList API)**
-  https://docs.api.jikan.moe
+- **Jikan API (Unofficial MyAnimeList API)**  
+  https://api.jikan.moe/v4/anime
 
-This API provides real-time anime data including titles, ratings, genres, and synopsis.
-
----
-
-## 🚀 Features
-
-### 🔍 Search Functionality
-
-* Users can search anime by name
-* Dynamic results displayed using API data
-
-### 🎯 Filtering
-
-* Filter anime by genre (Action, Romance, Comedy, etc.)
-* Filter top-rated or trending anime
-
-### 🔃 Sorting
-
-* Sort anime by:
-
-  * Rating
-  * Popularity
-  * Alphabetical order
-
-### 📺 Anime Details
-
-* View synopsis, rating, and other details
-* Expandable cards for better UI experience
-
-### ❤️ Favorites (Optional Enhancement)
-
-* Save favorite anime using localStorage
+- Fetches paginated anime data dynamically
 
 ---
 
-## ⚙️ Technologies Used
+## 🧠 How It Works
 
-* HTML
-* CSS / Tailwind CSS
-* JavaScript (ES6)
-
-  * Fetch API
-  * Array HOFs (map, filter, sort)
-
----
-
-## 🧩 Milestone Plan
-
-### ✅ Milestone 1: Project Setup
-
-* Finalize project idea
-* Select API (Jikan API)
-* Create GitHub repository
-* Prepare README.md
-
-### 🔄 Milestone 2: API Integration
-
-* Fetch anime data using API
-* Display anime cards dynamically
-* Handle loading states
-* Ensure responsive design
-
-### ⚡ Milestone 3: Core Features
-
-* Implement search functionality
-* Add filtering using array methods
-* Add sorting options
-* Add interactive UI elements (expand cards, favorites)
-
-### 🚀 Milestone 4: Final Submission
-
-* Clean and refactor code
-* Update README
-* Deploy project
+- Anime data is fetched using the Fetch API
+- Data is stored in a global array
+- UI is dynamically rendered using DOM manipulation
+- Search and sorting are applied on the currently loaded data
+- Pagination triggers new API calls with updated page numbers
 
 ---
 
-## ⭐ Bonus Features (Planned)
+## 🛠 Tech Stack
 
-* Debounced search input
-* Pagination or infinite scrolling
-* Dark/Light mode toggle
-* Local storage for favorites
-
----
-
-## 📱 UI/UX Design Ideas
-
-* Netflix-style card layout
-* Dark theme interface
-* Smooth hover effects
-* Responsive grid system
+- HTML
+- CSS (Grid + Responsive Design)
+- JavaScript (ES6)
+  - Fetch API
+  - Array methods (filter, sort, forEach)
+  - DOM manipulation
+- LocalStorage (for theme persistence)
 
 ---
 
-## ⚙️ Setup Instructions
+## 📂 Project Structure
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
+
+---
+
+## ▶️ How to Run Locally
 
 1. Clone the repository
-2. Open `index.html` in a browser
-3. Ensure internet connection for API calls
+2. Open `index.html` in your browser
+3. Ensure you have an internet connection (required for API calls)
 
 ---
 
-## 📌 Future Enhancements
+## 🚧 Limitations
 
-* User authentication
-* Personalized recommendations
-* Watch history tracking
+- Search works only on the currently loaded page
+- No debounce for search input
+- No detailed anime view page (redirects to external site)
+- Basic error handling
 
 ---
 
-## 💡 Key Learning Outcomes
+## 🚀 Future Improvements
 
-* Working with real-world APIs
-* Implementing search, filter, and sort using HOFs
-* Building responsive UI
-* Managing dynamic data in JavaScript
+- Debounced search
+- Global search using API
+- Infinite scrolling
+- Genre-based filtering
+- Anime details modal/page
+- Better loading indicators
+
+---
+
+## 🎯 Learning Outcomes
+
+- Working with real-world APIs
+- Handling asynchronous JavaScript
+- Dynamic UI rendering without frameworks
+- Managing application state using vanilla JavaScript
 
 ---
 
 ## 🙌 Conclusion
 
-This project focuses on combining functionality with user experience to build a practical and interactive anime discovery platform. It showcases core JavaScript skills and prepares for real-world web development challenges.
+This project focuses on building a functional and responsive anime browsing interface using core web technologies, making it a solid foundation for more advanced frontend development.
+
+---
